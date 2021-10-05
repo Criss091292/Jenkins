@@ -22,14 +22,9 @@ pipeline {
         stage("Code coverage") {
             steps {
 		    sh "pwd"
-        	    sh "gradle jacocoTestReport"
-        	 	publishHTML (target: [
-         	        reportDir: 'build/reports/jacoco/test/html',
-         			reportFiles: 'index.html',
-         			reportName: 'JacocoReport'
-         	    ])
-			sh "pwd"
-         		sh "../JenkinsSofka/gradlew jacocoTestCoverageVerification"
+        	    sh "gradle jacocoTestReport"        	 	
+		    sh "pwd"
+        	    sh "../JenkinsSofka/gradlew jacocoTestCoverageVerification"
          	}
         }        
     }
