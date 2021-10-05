@@ -28,15 +28,6 @@ pipeline {
          	    ])
          		sh "./Jenkins/gradlew jacocoTestCoverageVerification"
          	}
-        }
-        stage('SonarQube analysis') {
-            steps {
-                withSonarQubeEnv('SONAR800') {
-                   sh "${tool name: 'SonarScanner',
-                    type:'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner
-                     -Dproject.settings=sonar-project.properties"
-                }
-            }
-        }
+        }        
     }
 }
