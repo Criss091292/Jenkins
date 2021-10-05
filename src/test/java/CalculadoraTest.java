@@ -24,6 +24,7 @@ class CalculadoraTest {
 
     @Test
     void dividir() {
+        fail();
         assertEquals(6,calculadora.dividir(12,2));
     }
 }

@@ -33,7 +33,7 @@ pipeline {
 
 	stage("deployment") {
 		steps {
-		    echo "Deberia implementar logica para hacer deployment aqui" 
+		    echo "Deberia implementar logica para hacer deployment aqui"
 	
          	}	
         }                
