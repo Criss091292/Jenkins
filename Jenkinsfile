@@ -15,7 +15,7 @@ pipeline {
         stage("Compile") {
             steps {
 		sh "pwd"
-                sh "./JenkinsSofka/gradlew compileJava"
+                sh "../JenkinsSofka/gradlew compileJava"
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
          			reportName: 'JacocoReport'
          	    ])
 			sh "pwd"
-         		sh "./JenkinsSofka/gradlew jacocoTestCoverageVerification"
+         		sh "../JenkinsSofka/gradlew jacocoTestCoverageVerification"
          	}
         }        
     }
