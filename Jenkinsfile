@@ -7,7 +7,7 @@ pipeline {
      stage("Unit test") {
                 steps {
 		    sh "pwd"
-                    sh "cd Jenkins"
+                    sh "cd JenkinsSofka"
                     sh "ls"
                     sh "./gradlew test"
                 }
@@ -15,7 +15,7 @@ pipeline {
         stage("Compile") {
             steps {
 		sh "pwd"
-                sh "./Jenkins/gradlew compileJava"
+                sh "./JenkinsSofka/gradlew compileJava"
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
          			reportName: 'JacocoReport'
          	    ])
 			sh "pwd"
-         		sh "./Jenkins/gradlew jacocoTestCoverageVerification"
+         		sh "./JenkinsSofka/gradlew jacocoTestCoverageVerification"
          	}
         }        
     }
