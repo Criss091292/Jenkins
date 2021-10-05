@@ -22,13 +22,20 @@ pipeline {
         }
 
         stage("Code coverage") {
-	steps {
+		steps {
 		    sh "pwd"
         	    sh "gradle jacocoTestReport"        	 	
 		    sh "pwd"
         	    sh "../JenkinsSofka/gradlew jacocoTestCoverageVerification"
 	
-         }	
-        }        
+         	}	
+        }
+
+	stage("deployment") {
+		steps {
+		    echo "Deberia implementar logica para hacer deployment aqui"
+	
+         	}	
+        }                
     }
 }
