@@ -7,7 +7,7 @@ pipeline {
      stage("Unit test") {
                 steps {
 		    sh "pwd"
-                    sh "cd JenkinsSofka"
+                    sh "cd ../JenkinsSofka"
                     sh "ls"
                     sh "./gradlew test"
                 }
