@@ -21,4 +21,9 @@ class CalculadoraTest {
     void multiplicar() {
         assertEquals(6,calculadora.multiplicar(2,3));
     }
+
+    @Test
+    void dividir() {
+        assertEquals(6,calculadora.dividir(12,2));
+    }
 }
